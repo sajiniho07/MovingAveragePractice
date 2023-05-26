@@ -36,9 +36,9 @@ The plot should open in a new window.
 ## Usage
 The script reads in a CSV file containing financial data and expects it to have the following columns:
 
-- <DTYYYYMMDD>: Date in YYYYMMDD format.
+- `<DTYYYYMMDD>`: Date in YYYYMMDD format.
 
-- <CLOSE>: Closing price.
+- `<CLOSE>`: Closing price.
 
 It then computes a moving average of the closing prices using a sliding window approach with the specified kernel_size. Finally, it plots the original closing prices along with the computed moving average.
 
@@ -48,6 +48,10 @@ Also np.convolve method represent this code:
 ```
 moving_avg[kernel_size:] = np.array([close_values[i : i + kernel_size + 1].mean() for i in range(len(close_values) - kernel_size)])
 ```
+
+## Example
+
+![sample](https://github.com/sajiniho07/MovingAveragePractice/blob/master/res/output.png)
 
 ## License ##
 
